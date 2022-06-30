@@ -37,7 +37,6 @@
             android:id="@+id/dev_keys_private"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="6104fab68386c93a62d75fabccbbc7a55ab24ba1"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,7 +51,6 @@
             android:id="@+id/dev_keys_public"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="29b9e03b971408793801bedf99b8a1f9"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
