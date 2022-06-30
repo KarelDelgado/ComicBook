@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.view.ComicDetailsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/comic_book_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/comic_book_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/comic_book_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminateOnly="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/item_empty_state"
+            android:id="@+id/comic_book_empty_state"
+            android:visibility="gone"/>
+        <include layout="@layout/item_error_state"
+            android:id="@+id/comic_book_error_state"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/comic_book_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:padding="@dimen/full_bezel"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/comic_book_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/half_bezel"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Title"
+                    tools:text="Marvel Previews"/>
+
+                <ImageView
+                    android:id="@+id/comic_book_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/full_bezel"
+                    app:layout_constraintDimensionRatio="2:3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/comic_book_title"
+                    app:layout_constraintEnd_toStartOf="@id/guideline"
+                    android:contentDescription="@string/comic_item_image_desc"
+                    android:scaleType="centerCrop"
+                    tools:src="@mipmap/placeholder_bg"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="@dimen/full_bezel"
+                    app:layout_constraintStart_toEndOf="@id/guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/comic_book_title"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/comic_book_read_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/read_now_label"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/comic_book_marks_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="@string/mark_as_read_label"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/comic_book_add_library_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="@string/add_to_library_label"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/comic_book_offline_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="@string/read_offline_label"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/comic_book_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_marginTop="@dimen/full_bezel"
+                    android:justificationMode="inter_word"
+                    app:layout_constraintTop_toBottomOf="@id/comic_book_image"
+                    tools:text="For Doctor Bruce Banner life is anything but normal. But what happens when two women get between him and his alter ego, the Incorrigible Hulk? Hulk confused!
+Indy superstar Peter Bagge (THE MEGALOMANIACAL SPIDER-MAN) takes a satirical jab at the Hulk mythos with a tale of dames, debauchery and destruction.
+32 PGS./MARVEL PSR...$2.99"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</LinearLayout>
+

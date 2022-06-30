@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Comic Book</string>
+    <string name="not_books_found_message">We couldn\'t find your books at this time.</string>
+    <string name="you_are_offline_message">You\'re offline. Check your connection.</string>
+    <string name="unknown_error_message">We are experiencing a glitch. Please try again in a bit.</string>
+    <string name="retry_title">retry</string>
+    <string name="comic_item_image_desc">Comic book thumbnail</string>
+    <string name="read_now_label">Read now</string>
+    <string name="mark_as_read_label">Mark as read</string>
+    <string name="add_to_library_label">add to library</string>
+    <string name="read_offline_label">read offline</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_label">Settings</string>
+    <string name="save_label">SAVE</string>
+    <string name="public_key_label">Public key</string>
+    <string name="private_key_label">Private key</string>
+    <string name="developer_keys_title">Set Marvel\'s developer keys</string>
+</resources>

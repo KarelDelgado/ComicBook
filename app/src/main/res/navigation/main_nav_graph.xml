@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/comicListFragment">
+
+    <fragment
+        android:id="@+id/comicListFragment"
+        android:name="com.karel.comicbook.ui.view.ComicListFragment"
+        android:label="fragment_comic_list"
+        tools:layout="@layout/fragment_comic_list">
+        <action
+            android:id="@+id/action_comicListFragment_to_comicDetailsFragment"
+            app:destination="@id/comicDetailsFragment" />
+        <action
+            android:id="@+id/action_comicListFragment_to_keysFragment"
+            app:destination="@id/keysFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/comicDetailsFragment"
+        android:name="com.karel.comicbook.ui.view.ComicDetailsFragment"
+        android:label="fragment_comic_details"
+        tools:layout="@layout/fragment_comic_details" />
+    <fragment
+        android:id="@+id/keysFragment"
+        android:name="com.karel.comicbook.ui.view.KeysFragment"
+        android:label="Developer Keys"
+        tools:layout="@layout/fragment_keys" />
+
+</navigation>

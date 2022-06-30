@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="quarter_bezel">4dp</dimen>
+    <dimen name="half_bezel">8dp</dimen>
+    <dimen name="full_bezel">16dp</dimen>
+    <dimen name="third_bezel">24dp</dimen>
+    <dimen name="double_bezel">32dp</dimen>
+    <dimen name="triple_bezel">40dp</dimen>
+
+</resources>
