@@ -3,6 +3,7 @@
     <string name="not_books_found_message">We couldn\'t find your books at this time.</string>
     <string name="you_are_offline_message">You\'re offline. Check your connection.</string>
     <string name="unknown_error_message">We are experiencing a glitch. Please try again in a bit.</string>
+    <string name="unauthorized_error_message">Unauthorized. Please add valid developer keys.</string>
     <string name="retry_title">retry</string>
     <string name="comic_item_image_desc">Comic book thumbnail</string>
     <string name="read_now_label">Read now</string>

@@ -54,6 +54,9 @@ class ComicListFragment: Fragment(), ComicBookClickListener, ErrorRetryListener 
                             ErrorCode.NO_CONNECTION -> {
                                 getString(R.string.you_are_offline_message)
                             }
+                            ErrorCode.UNAUTHORIZED -> {
+                                getString(R.string.unauthorized_error_message)
+                            }
                             else -> {
                                 getString(R.string.unknown_error_message)
                             }
