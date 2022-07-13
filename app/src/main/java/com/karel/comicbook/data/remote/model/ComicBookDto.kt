@@ -6,5 +6,6 @@ import com.squareup.moshi.JsonClass
 data class ComicBookDto(val id: String,
                     val title: String?,
                     val description: String?,
-                    val thumbnail: ComicBookThumbnail
+                    val thumbnail: ComicBookThumbnail,
+                    val urls: List<ComicBookUrlDto>
 )

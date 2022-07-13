@@ -1,11 +1,12 @@
 package com.karel.comicbook.domain.exceptions
 
+import android.util.Log
 import com.squareup.moshi.JsonEncodingException
 import retrofit2.HttpException
 import java.net.HttpURLConnection
 import java.net.UnknownHostException
 
-class NetworkException(private val throwable: Throwable): BaseException() {
+class NetworkException(throwable: Throwable): BaseException() {
 
     override val error: ErrorCode = when(throwable) {
         is UnknownHostException -> ErrorCode.NO_CONNECTION
@@ -21,5 +22,7 @@ class NetworkException(private val throwable: Throwable): BaseException() {
         }
         is JsonEncodingException -> ErrorCode.JSON_ENCODING
         else -> ErrorCode.UNKNOWN
+    }.also {
+        Log.e("NetworkException", "Original message: ${throwable.message}")
     }
 }
