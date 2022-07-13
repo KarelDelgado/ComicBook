@@ -48,5 +48,3 @@ fun buildRetrofit(baseUrl: String): Retrofit {
         .client(okHttpClient)
         .build()
 }
-
-//fun buildStocksApi(retrofit: Retrofit): MarvelApi = retrofit.create(StocksApi::class.java)
